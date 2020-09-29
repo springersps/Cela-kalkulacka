@@ -1,0 +1,12 @@
+td button {
+    width: 100%;
+}
+
+td {
+    width: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 350px;
+}

@@ -1,4 +1,5 @@
 var hodnota = "";
+var vysledek = "";
 
 function _0()
 {
@@ -64,7 +65,7 @@ function _8()
     console.log(hodnota);
 }
 function _9()
- {
+{
     hodnota += 9;   
 
     document.getElementById("hodnota").innerHTML = hodnota;
@@ -73,5 +74,16 @@ function _9()
 
 function plus()
 {
-    
+    vysledek = hodnota;
+
+    parseInt(hodnota);
+    parseInt(vysledek);
+
+    vysledek += hodnota;
+    hodnota = "";
+}
+
+function pocitani()
+{
+    console.log(vysledek);
 }

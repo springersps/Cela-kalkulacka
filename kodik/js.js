@@ -134,6 +134,8 @@ function mocnina2()
     if(vysledek == ""){
     vysledek = hodnota;
     }
+    vysledek = vysledek * vysledek;
+    console.log(vysledek);
 }
 
 function druhaodmocnina()
@@ -142,6 +144,8 @@ function druhaodmocnina()
     if(vysledek == ""){
         vysledek = hodnota;
     }
+    vysledek = Math.sqrt(vysledek);
+    console.log(vysledek);
 }
 
 function procenta(){
@@ -153,6 +157,8 @@ function obracenahodnota(){
     if(vysledek == ""){
     vysledek = hodnota;
     }
+    vysledek = 1 / vysledek;
+    console.log(vysledek);
 }
 
 function CE(){
@@ -190,21 +196,9 @@ function pocitani()
     if(znak == "deleno"){
         vysledek /= hodnota;
     }
-
-    if(znak == "mocnina2"){
-        vysledek = vysledek * vysledek;
-    }
-    if(znak == "druhaodmocnina"){
-        vysledek = Math.sqrt(vysledek);
-    }
     if(znak == "procenta"){
         hodnota = hodnota / 100;
         vysledek *= hodnota;
     }
-    if(znak == "obracenahodnota"){
-        vysledek = 1 / vysledek;
-    }
-
-// udelat aby se procesy s jednou hodnotou(cislem) dely mimo =
     console.log(vysledek);
 }

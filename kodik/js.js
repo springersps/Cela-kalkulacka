@@ -177,12 +177,8 @@ function del(){
 
 function pocitani()
 {
-    if(znak == "plus")
-    {
-        parseInt(hodnota);
-        parseInt(vysledek);
-
-        vysledek += hodnota;
+    if(znak == "plus"){
+        vysledek = parseInt(hodnota) + parseInt(vysledek);
     }
 
     if(znak == "minus"){

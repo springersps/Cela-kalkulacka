@@ -73,6 +73,22 @@ function _9()
     console.log(hodnota);
 }
 
+function desetina()
+{
+    hodnota += ".";
+
+    document.getElementById("hodnota").innerHTML = hodnota;
+    console.log(hodnota);
+}
+
+function negace()
+{
+    hodnota = -hodnota;
+
+    document.getElementById("hodnota").innerHTML = hodnota;
+    console.log(hodnota);
+}
+
 function plus()
 {
     znak = "plus";
@@ -128,6 +144,31 @@ function druhaodmocnina()
     }
 }
 
+function procenta(){
+    znak = "procenta";
+}
+
+function obracenahodnota(){
+    znak = "obracenahodnota";
+    if(vysledek == ""){
+    vysledek = hodnota;
+    }
+}
+
+function CE(){
+    hodnota = "";
+}
+
+function C(){
+    hodnota = "";
+    vysledek = "";
+}
+
+function del(){
+    hodnota = hodnota.slice(0, hodnota.length -1);
+    console.log(hodnota);
+}
+
 function pocitani()
 {
     if(znak == "plus")
@@ -156,6 +197,14 @@ function pocitani()
     if(znak == "druhaodmocnina"){
         vysledek = Math.sqrt(vysledek);
     }
+    if(znak == "procenta"){
+        hodnota = hodnota / 100;
+        vysledek *= hodnota;
+    }
+    if(znak == "obracenahodnota"){
+        vysledek = 1 / vysledek;
+    }
 
+// udelat aby se procesy s jednou hodnotou(cislem) dely mimo =
     console.log(vysledek);
 }

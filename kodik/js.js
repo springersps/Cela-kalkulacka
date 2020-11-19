@@ -198,3 +198,20 @@ function pocitani()
     }
     console.log(vysledek);
 }
+
+function odeslat(cislice) {
+
+    let komunikacniObjekt = new XMLHttpRequest();
+
+    komunikacniObjekt.open("GET", "ajax.php?cislice=" + cislice, true);
+    komunikacniObjekt.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            let odpoved = JSON.parse(this.responseText);
+            console.log(odpoved[0]["pocet"]);
+            console.log(odpoved);
+            document.getElementById("cislice" + cislice).innerHTML = odpoved[cislice]["pocet"];
+        }
+    };
+    komunikacniObjekt.send();
+}
